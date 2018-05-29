@@ -61,7 +61,6 @@
             </div>
             <div class="col-2">
                 <a href="#" style="color:#000;"><i class="fa fa-search fa-lg"></i></a>
-
             </div>
             <div class="col-4 text-center">
                 <img style=" width:50px;height:50px;" src="https://shoplineimg.com/53e6fa271a08e051c4000003/5652c98b69702d145f27a700/x140.webp?source_format=jpg">

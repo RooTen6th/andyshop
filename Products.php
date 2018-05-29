@@ -75,7 +75,7 @@
             }
         }
         /*Phone*/
-        @media (max-width:576px) {
+        @media (max-width:414px) {
 
             .card {
                 width: 100%;

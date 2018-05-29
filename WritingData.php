@@ -12,6 +12,43 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous" />
 
+    <style>
+        /*WebPage*/
+        @media (min-width: 768px) {
+            label {
+                font-size:20px;
+            }
+            .listbtn p{
+                font-size:26px;
+            }
+            .listbtn span {
+                font-size: 26px;
+            }
+            .title label {
+                font-size:26px;
+            }
+            #Phone_List {
+                display:none;
+            }
+        }
+        /*Phone*/
+        @media (max-width:576px) {
+            .listbtn p {
+                font-size: 20px;
+            }
+            .listbtn span {
+                font-size: 20px;
+            }
+            .title label {
+                font-size: 18px;
+            }
+            .table {
+                display:none;
+            }
+        }
+    </style>
+
+
     <script>
         var x, y, n = 0, ny = 0, rotINT, rotYINT
 
@@ -91,13 +128,42 @@
                 </div>-->
 
                 <div class="border text-center listbtn" style="padding:10px;margin-top:30px;cursor:pointer;" onclick="rotateDIV()">
-                    <h3>合計：NT$3580</h3>
-                    <span style="color:#000000; font-size:24px;">
+                    <p>合計：NT$3580</p>
+                    <span style="color:#000000;">
                         購物車
                         <i class="fas fa-angle-down" style="margin:0 10px;font-size:26px;" id="icontransfer"></i>
                     </span>
                 </div>
                 <div class="border listbtn" style="width:100%;display:none;cursor:pointer;" id="content">
+                    <div id="Phone_List" style="padding:10px;">
+                        <div class="row">
+                            <div class="col-3">
+                                <img src="https://shoplineimg.com/53e6fa271a08e051c4000003/5b000d320e64fee20a005d67/800x.webp?source_format=jpg" alt="Alternate Text" style="width:80px;height:80px;" />
+                            </div>
+                            <div class="col-9">
+                                <p>Suicoke Nylon Tape Straps Sandals</p>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-8">
+                                <div class="input-group" id='myform' style="margin:10px 0;">
+                                    <button type='button' value='-' class="btn qtyminus border" field='quantity' style="border-radius:0px;width:35px;height:35px;padding:5px;background-color:#ffffff;">
+                                        <i class="fa fa-minus" style="width:5px;height:5px;"></i>
+                                    </button>
+                                    <input class="form-control" type='text' name='quantity' value='0' style="height:35px;max-width:100px;" />
+                                    <button type='button' value='+' class="btn qtyplus border" field='quantity' style="border-radius:0px;width:35px;height:35px;padding:5px;background-color:#ffffff;">
+                                        <i class="fa fa-plus"></i>
+                                    </button>
+                                    <a style="padding:8px;">
+                                        <i class="far fa-trash-alt" style="font-size:20px;"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <p style="margin-top:15px;">NT$3,580</p>
+                            </div>
+                        </div>
+                    </div>
                     <table class="table col-md-12 border-0">
                         <thead class="border-top-0">
                             <tr>
@@ -134,12 +200,12 @@
                     </div>
 
                     <div class="row" style="padding:20px;">
-                        <div class="col-md-2 offset-md-6 text-right">
+                        <div class="col-md-2 offset-md-6 col-6 text-right">
                             <p style="font-size:20px;">小計:</p>
                             <p style="font-size:20px;">運費:</p>
                             <p style="font-size:20px;">合計:</p>
                         </div>
-                        <div class="col-md-4 text-right">
+                        <div class="col-md-4 col-6 text-right">
                             <p style="font-size:20px;">NT$3580</p>
                             <p style="font-size:20px;">NT$0</p>
                             <p style="font-size:20px;">NT$3580</p>
@@ -156,8 +222,8 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="border">
-                                <div style="background-color:#F6F6F6">
-                                    <label style="font-size:26px;padding:10px 20px;;">顧客資料</label>
+                                <div style="background-color:#F6F6F6" class="title">
+                                    <label style="padding:10px 20px;">顧客資料</label>
                                 </div>
                                 <div class="border-top" style="padding:20px;">
                                     <span>
@@ -165,22 +231,22 @@
                                         <a href="#">登入</a>
                                     </span>
                                     <div class="form-group" style="margin-top:20px;">
-                                        <label style="font-size:20px;">顧客名稱</label>
+                                        <label>顧客名稱</label>
                                         <input class="form-control" type="text" name="name" value="" />
                                     </div>
                                     <div class="form-group" style="margin-top:20px;">
-                                        <label style="font-size:20px;">電子信箱</label>
+                                        <label>電子信箱</label>
                                         <input class="form-control" type="email" name="name" value="" />
                                     </div>
                                     <div class="form-group" style="margin-top:20px;">
-                                        <label style="font-size:20px;">電話號碼</label>
+                                        <label>電話號碼</label>
                                         <input class="form-control" type="tel" name="name" value="" />
                                     </div>
                                 </div>
                             </div>
                             <div class="border" style="margin-top:30px;">
-                                <div class="border-top" style="background-color:#F6F6F6">
-                                    <label style="font-size:26px; padding:10px 20px;">訂單備註</label>
+                                <div class="title" style="background-color:#F6F6F6">
+                                    <label style="padding:10px 20px;">訂單備註</label>
                                 </div>
                                 <div class="border-top" style="padding:20px;">
                                     <textarea style="width:100%;resize:none;" rows="5"></textarea>
@@ -189,23 +255,23 @@
                         </div>
                         <div class="col-md-6">
                             <div class="border">
-                                <div style="background-color:#F6F6F6;">
-                                    <label style="font-size:26px;padding:10px 20px;">送貨資料</label>
+                                <div class="title" style="background-color:#F6F6F6;">
+                                    <label style="padding:10px 20px;">送貨資料</label>
                                     <span style="position: absolute;right:0px;padding:20px 40px;font-size:18px;">運費:NT$0</span>
                                 </div>
                                 <div class="border-top" style="padding:20px;">
-                                    <span style="font-size:18px;">已選擇的送貨方式：7-11店到店(請先付款再至7-11取貨)</span>
+                                    <span>已選擇的送貨方式：7-11店到店(請先付款再至7-11取貨)</span>
                                     <div class="form-check" style="margin-top:20px;">
                                         <input type="checkbox" class="form-check-input" style="zoom:1.5" />
-                                        <label class="form-check-label" style="font-size:18px;">收件人資料與顧客相同</label>
+                                        <label class="form-check-label">收件人資料與顧客相同</label>
                                     </div>
                                     <div class="form-group" style="margin-top:20px;">
-                                        <label style="font-size:20px;">收件人名稱</label>
+                                        <label>收件人名稱</label>
                                         <input class="form-control" type="text" name="name" value="" />
                                         <small>請填入收件人真實姓名，以確保順利收件</small>
                                     </div>
                                     <div class="form-group" style="margin-top:20px;">
-                                        <label style="font-size:20px;">收件人電話號碼</label>
+                                        <label>收件人電話號碼</label>
                                         <input class="form-control" type="tel" name="name" value="" />
                                     </div>
                                     <div class="form-group border-top" style="margin-top:20px;padding-top:20px;">
@@ -216,8 +282,8 @@
                                 </div>
                             </div>
                             <div class="border" style="margin-top:30px;">
-                                <div style="background-color:#F6F6F6">
-                                    <label style="font-size:26px; padding:10px 20px;">付款資料</label>
+                                <div class="title" style="background-color:#F6F6F6">
+                                    <label style="padding:10px 20px;">付款資料</label>
                                 </div>
                                 <div class="border-top" style="padding:20px;">
                                     <span>已選擇付款方式：信用卡</span>

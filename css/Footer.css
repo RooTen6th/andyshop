@@ -1,0 +1,63 @@
+﻿@media (max-width: 414px) {
+    #footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-transform: capitalize;
+        background: none;
+        border-top: 1px solid #000;
+        text-align: center;
+    }
+
+        #footer p {
+            font-size: 16px;
+        }
+
+        #footer ul li {
+            font-size: 16px;
+        }
+
+
+        #footer ul {
+            padding: 0px;
+        }
+
+        #footer h4 {
+            margin-top: 30px;
+            font-size: 18px;
+        }
+
+        #footer img {
+            margin: 0px 20px 20px 0px;
+        }
+}
+
+/*Web_Page*/
+@media (min-width: 768px) {
+    #footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        text-transform: capitalize;
+        background: none;
+        border-top: 1px solid #000;
+    }
+
+        #footer p {
+            font-size: 20px;
+        }
+
+        #footer ul li {
+            font-size: 20px;
+        }
+
+        #footer h4 {
+            font-size: 24px;
+        }
+}
+
+#footer img {
+    height: 40px;
+}
+
+ 
